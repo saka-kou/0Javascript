@@ -148,6 +148,4 @@ const q09 = () => {
 
   console.log(`そのままの結果${result1}`);
   console.log(`小数点を丸めた結果${result2}`);
-
 }
-
