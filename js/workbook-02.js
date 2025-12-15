@@ -10,8 +10,13 @@ const q10 = () => {
   // ----------------------------------------
   console.log(`10. 整数を入力して、その値が 0 なら「 ZERO 」、0 でなければ「 not ZERO 」とコンソールに表示する`);
 
-  prompt(`Q10. 数値を入力`);
-
+  let num = parseInt(prompt(`Q10. 数値を入力`));
+  if (num == 0) {
+    console.log("ZERO");
+  }
+  else {
+    console.log("not ZERO");
+  }
 
 
 }
@@ -25,11 +30,29 @@ const q11 = () => {
   // ----------------------------------------
   console.log(`11. 都道府県番号を入力し、その値に該当する都道府県名をコンソールに表示する`);
 
-  prompt(`Q11. 都道府県番号を入力`);
+  let num = parseInt(prompt(`Q11. 都道府県番号を入力`));
 
-
-
-
+  if (num == 25) {
+    console.log("滋賀県");
+  }
+  else if (num == 26) {
+    console.log("京都府");
+  }
+  else if (num == 27) {
+    console.log("大阪府");
+  }
+  else if (num == 28) {
+    console.log("兵庫県");
+  }
+  else if (num == 29) {
+    console.log("奈良県");
+  }
+  else if (num == 30) {
+    console.log("和歌山県");
+  }
+  else {
+    console.log("該当なし");
+  }
 }
 
 // <-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*->
@@ -41,10 +64,14 @@ const q12 = () => {
   // ----------------------------------------
   console.log(`12. 整数を入力し、その値が偶数なら「 even 」、奇数ならば「 odd 」とコンソールに表示する`);
 
-  prompt(`Q12. 整数を入力`);
+  let num = parseInt(prompt(`Q12. 整数を入力`));
 
-
-
+  if (num % 2 == 0) {
+    console.log("偶数です");
+  }
+  else {
+    console.log("奇数です");
+  }
 
 }
 
@@ -57,9 +84,20 @@ const q13 = () => {
   // ----------------------------------------
   console.log(`13. 入園人数を入力して、その入園料金をコンソールに表示する\r\n入園料：１人８００円、５人以上のグループなら１人７６０円、２０人以上の団体なら１人５００円`);
 
-  prompt(`Q13. 入園者数を入力`);
+  let num = parseInt(prompt(`Q13. 入園者数を入力`));
+  let price = 800;
+  let price1 = 760;
+  let price2 = 500;
 
-
+  if (num < 5) {
+    console.log(price * num + "円");
+  }
+  else if (num < 20) {
+    console.log(price1 * num + "円");
+  }
+  else if (num >= 20) {
+    console.log(price2 * num + "円");
+  }
 
 
 }
@@ -73,10 +111,30 @@ const q14 = () => {
   // ----------------------------------------
   console.log(`14. 出席率と評価点を入力し、A ~ Fの評価判定結果をコンソールに表示する\r\n評価判定は、出席率７５％以上 かつ \r\n評価点90~100：A\r\n評価点80~89：B\r\n評価点70~79：C\r\n評価点60~69：D\r\n評価点60未満：F\r\n出席率が75%未満の場合は、評価点に関わらず判定はF`);
 
-  prompt(`Q14. 出席率の入力`);
-  prompt(`Q14. 評価点の入力`);
+  let num1 = parseInt(prompt(`Q14. 出席率の入力`));
+  let num2 = parseInt(prompt(`Q14. 評価点の入力`));
 
+  console.log(`出席率:${num1}`);
+  console.log(`評価点:${num2}`);
 
+  if (num1 < 75) {
+    console.log("F");
+  }
+  else if (num2 < 60) {
+    console.log("F");
+  }
+  else if (num2 < 69) {
+    console.log("D");
+  }
+  else if (num2 < 79) {
+    console.log("C");
+  }
+  else if (num2 < 89) {
+    console.log("B");
+  }
+  else if (num2 <= 100) {
+    console.log("A");
+  }
 
 
 }
